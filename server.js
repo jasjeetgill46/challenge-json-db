@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 1337
 const app = express()
 
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/:id/*', api.getProperty)
 app.put('/:id/*', api.saveProperty)
